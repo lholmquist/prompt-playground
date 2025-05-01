@@ -1,0 +1,21 @@
+{
+  "name": "nodejs_ai_prompt_playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/env": "^5.0.2",
+    "@fastify/static": "^8.0.4",
+    "@langchain/core": "^0.3.30",
+    "@patternfly/patternfly": "^6.1.0",
+    "fastify": "^5.2.1",
+    "fastify-plugin": "^5.0.1",
+    "langchain": "^0.3.11"
+  }
+}

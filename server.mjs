@@ -7,8 +7,6 @@ import fs from 'node:fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-import promptPlaygroundRoute from './routes/prompt-playground-route.mjs';
-
 // Setup Logging
 const fastify = Fastify({
   logger: true
@@ -21,6 +19,8 @@ await fastify.register(fastifyEnv, {
   },
   dotenv: true
 });
+
+import promptPlaygroundRoute from './routes/prompt-playground-route.mjs';
 
 // WebUI related setup and serving
 const webuiLocation = './public';

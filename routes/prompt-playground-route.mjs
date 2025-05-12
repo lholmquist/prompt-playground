@@ -6,10 +6,15 @@ import { ChatPromptTemplate } from '@langchain/core/prompts';
 import * as ChainsModule from 'langchain/chains';
 import * as ToolsModule from 'langchain/tools';
 import * as RunnablesModule from '@langchain/core/runnables';
+import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-grpc';
 
 traceloop.initialize({
+  // logLevel: 'debug',
   disableBatch: true,
-  baseUrl: 'http://localhost:3000/api/otel',
+  exporter: new OTLPTraceExporter(),
+  baseUrl: 'http://localhost:1000/api/otel',
+  // baseUrl: 'http://otel-collector.parasol-app-user2-dev.svc.cluster.local:4317',
+  // baseUrl: 'https://admin-parasol-insurance-parasol-webui.apps.cluster-qqqjs.qqqjs.sandbox3296.opentlc.com/api/otel',
   appName: 'Prompt Playground',
   instrumentModules: {
     langchain: {
@@ -19,6 +24,7 @@ traceloop.initialize({
     }
   }
  });
+
 
 async function promptPlaygroundRoute (fastify, options) {
   fastify.addContentTypeParser('application/x-protobuf', function (request, payload, done) {

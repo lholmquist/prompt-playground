@@ -5,6 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "osx": {
+        "env":{
+          "OTEL_EXPORTER_OTLP_PROTOCOL": "grpc",
+          "OTEL_EXPORTER_OTLP_ENDPOINT": "localhost:3000",
+          "OTEL_SERVICE_NAME": "AI-experimentation",
+          "OTEL_TRACES_SAMPLER": "parentbased_always_on",
+          "OTEL_LOG_LEVEL": "DEBUG",
+          "OTEL_EXPORTER_OLTP_INSECURE": "False"
+        }
+      },
       "type": "node",
       "request": "launch",
       "name": "Launch Program",

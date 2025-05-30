@@ -9,7 +9,7 @@ import * as RunnablesModule from '@langchain/core/runnables';
 import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-grpc';
 
 traceloop.initialize({
-  // logLevel: 'debug',
+  logLevel: 'debug',
   disableBatch: true,
   exporter: new OTLPTraceExporter(),
   baseUrl: 'http://localhost:1000/api/otel',

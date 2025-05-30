@@ -8,9 +8,9 @@
       "osx": {
         "env":{
           "OTEL_EXPORTER_OTLP_PROTOCOL": "grpc",
-          "OTEL_EXPORTER_OTLP_ENDPOINT": "localhost:3000",
-          "OTEL_SERVICE_NAME": "AI-experimentation",
-          "OTEL_TRACES_SAMPLER": "parentbased_always_on",
+          // "OTEL_EXPORTER_OTLP_ENDPOINT": "localhost:3000",
+          // "OTEL_SERVICE_NAME": "AI-experimentation",
+          // "OTEL_TRACES_SAMPLER": "parentbased_always_on",
           "OTEL_LOG_LEVEL": "DEBUG",
           "OTEL_EXPORTER_OLTP_INSECURE": "False"
         }
